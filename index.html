@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="DriveBy">
+    <title>DriveBy</title>
+    <link rel="stylesheet" href="car.css">
+  </head>
+  <body>
+    <canvas id="background"></canvas>
+    <canvas></canvas>
+    <div class="scene" id="scene">
+      <div class="car red" id="user"></div>
+    </div>
+    <div class="menuList">
+      <button id="settings"></button>
+      <div id="menu" class="menuList-content">
+      <label id ="settingsLabel">Settings</label>
+	  <br />
+      <button class="menuButtons">Disconnect</button>
+      <br />
+      <button class="menuButtons">Clear screen</button>
+      </div>
+    </div>
+    <input maxlength="100" id="message" name="message" type="text" placeholder="Type message here...">
+    <div id="chat"></div>
+    <div class="info" id="players"></div>
+    <div class="info" id="minimap"></div>
+    <div id="playerinfo">
+      <div class="info" id="nick"></div>
+      <div class="info" id="score"></div>
+      <div class="info" id="ammo"></div>
+    </div>
+    <div class="info" id="health"></div>
+    <div class="info" id="killfeed"></div>
+    <script src="server/car-ws/node_modules/socket.io/lib/socket.io.js"></script>
+    <script src="car.js"></script>
+  </body>
+</html>
+
+<br/>

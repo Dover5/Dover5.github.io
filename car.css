@@ -1,0 +1,245 @@
+body {
+  overflow: hidden;
+  margin: 0;
+  font-family: Athletic_font;
+  font-weight: bold;
+}
+
+@font-face {
+ font-family: "Athletic_font";
+ src:url(font/Athletic.otf);
+}
+
+img {
+ width: auto;
+ height: 1vw;
+}
+
+canvas {
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+#background {
+  background-image:url(map/background.jpg);
+}
+
+.scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4000px;
+  height: 4000px;
+  overflow: hidden;
+}
+
+.car {
+  position: absolute;
+  z-index: 1;
+  top: -8px;
+  left: -4px;
+  width: 10px;
+  height: 20px;
+  border-radius: 2px;
+  will-change: transform;
+  -webkit-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.72);
+  -moz-box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.72);
+  box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.72);
+}
+
+.car.red {
+  background-image: url(cars/car1.png);  
+}
+
+.info  {
+ position: fixed;
+ bottom: 0px;
+ font-size: 1.2vw;
+}
+
+#ammo {
+ color: black;
+ opacity: 0.9;
+ border-top-right-radius: 5px;
+ position: relative;
+ margin: 0.1vw 0.5vw;
+ color: white;
+}
+
+#health {
+ width: 10vw;
+ opacity: 0.7;
+ height: 0.8vw;
+ left: 0.1vw;
+ bottom: 0.1vw;
+ background: green;
+}
+
+#nick {
+ opacity: 0.9;
+ position: relative;
+ margin: 0.1vw 0.5vw;
+}
+
+#score {
+ opacity: 0.9;
+ position: relative;
+ margin: 0.1vw 0.5vw;
+}
+
+#players {
+ right: 0px;
+ top: 0.5vw;
+ text-align: right;
+ text-shadow: black 1px 0 2px;
+ color: white;
+}
+
+#playerinfo {
+ position: fixed;
+ background: black;
+ opacity: 0.8;
+ width: auto;
+ height: auto;
+ bottom: 0;
+ left: 10.2vw;
+ color: white;
+ border-radius: 0px 0.3vw 0px 0px;
+ border-left: 2px gray;
+}
+
+#minimap {
+ background-image:url(map/minimap.png);
+ background-color: rgba(30,30,30,.6);
+ height: 10vw; 
+ width: 10vw;
+ opacity: 0.8;
+ bottom: 0;
+ background-size: 10vw 10vw;
+ border-radius: 0px 6px 0px 0px;
+ border-style: solid;
+ border-width: 0.1vw;
+}
+
+#settings {
+ background-color: Transparent;
+ position: fixed;
+ background-image:url(map/settings.png);
+ height: 2.4vw; 
+ width: 2.4vw;
+ opacity: 0.67;
+ background-size: cover;
+ border: none;
+ z-index: 4;
+}
+
+#settingsLabel {
+ color: white;
+ float: right;
+ opacity: 0.8;
+ height: 2.5vw;
+ font-size: 1.5vw; 
+}
+
+.explosion {
+ position:absolute;
+ width: 105px;
+ height: 105px;
+ animation-name: explode;
+ animation-duration: 30s;
+ z-index: 0;
+}
+
+.menuList {
+ position: fixed;
+ display: inline-block;
+ background: black;
+ z-index: 3;
+}
+
+.menuList-content {
+ display: none;
+ position: absolute;
+ background-color: rgba(30,30,30,.8);
+ min-width: 10vw;
+ padding: 0.3vw;
+ border-radius: 0px 5px 13px 5px;
+ box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.4);
+}
+
+.show {display:block;}
+
+.menuButtons {
+ width: 10vw;
+ height: 40px;
+ border-radius: 12px;
+ margin: 0.2vw 0 0.2vw;
+ opacity: 0.80;
+ font-size: 1vw;
+ font-family: Athletic_font;
+}
+
+#message {
+ position: fixed;
+ right: 1vw;
+ bottom: 1vw;
+ width: 19vw;
+ height: 1.5vw;
+ z-index: 2;
+ font-size: 1vw;
+ border: none;
+ padding: 0px 1vw;
+ border-radius: 0.4vw;
+ background: black;
+ opacity: 0.8;
+ color: white;
+ text-align: right;
+ font-family: Athletic_font;
+}
+
+#chat {
+ position: fixed;
+ right: 1vw;
+ bottom: 2vw;
+ width: 20vw;
+ height: 20vw;
+ text-align: right;
+ font-size: 1vw;
+ color: white;
+ text-shadow: black 1px 0 2px;
+}
+
+#killfeed {
+ right: 35vw;
+ width: 30vw;
+ height: 2vw;
+ top: 0;
+ text-align: center;
+ font-size: 1vw;
+ opacity: 0.8;
+}
+
+@keyframes explode {
+ 0.15% {background-image:url(guns/explosion/exp1.png);
+ z-index: 2;}
+ 0.3% {background-image:url(guns/explosion/exp2.png);}
+ 0.45% {background-image:url(guns/explosion/exp3.png);}
+ 0.6% {background-image:url(guns/explosion/exp4.png);}
+ 0.75% {background-image:url(guns/explosion/exp5.png);}
+ 1% {background-image:url(guns/explosion/exp6.png);}
+ 1.25% {background-image:url(guns/explosion/exp7.png);}
+ 1.5% {background-image:url(guns/explosion/exp8.png);}
+ 1.75% {background-image:url(guns/explosion/exp9.png);}
+ 2% {background-image:url(guns/explosion/exp10.png);}
+ 2.25% {background-image:url(guns/explosion/exp11.png);}
+ 2.5% {background-image:url(guns/explosion/exp12.png);}
+ 2.75% {background-image:url(guns/explosion/exp13.png);}
+ 3% {background-image:url(guns/explosion/exp14.png);}
+ 3.25% {background-image:url(guns/explosion/exp15.png);}
+ 3.5% {background-image:url(guns/explosion/crater.png);
+  opacity: 1;
+  z-index:0;}
+ 100% {background-image:url(guns/explosion/crater.png);
+  opacity: 0;}
+}
