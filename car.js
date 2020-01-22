@@ -91,7 +91,7 @@ const localCar = {
   hitId: []
 };
 
-window.scrollTo(localCar.x, localCar.y);
+setTimeout(() => window.scrollTo(localCar.x - windowWidth / 2, localCar.y - windowHeight / 2), 400);
 
 const cars = [localCar];
 const carsById = {};
