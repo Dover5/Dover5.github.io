@@ -1,5 +1,5 @@
 // const socket = io('http://192.168.1.28:80');
-// for localhost - const socket = io('http://127.0.0.1:80'); or http://192.168.1.31:80
+// for localhost - const socket = io('http://127.0.0.1:80');
 
 // Nickname
 
