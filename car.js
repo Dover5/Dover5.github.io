@@ -1066,7 +1066,7 @@ function weapon_propeties() {
 	ammo.innerHTML = `<img src="guns/gun${current_weapon+1}.png"> ${weapons[current_weapon][0]} ${current_ammo[current_weapon]} <img src="guns/ammo.png">`;
   }
 }
-weapon_propeties();
+setTimeout(() => weapon_propeties(), 400);
 
 if (document.images) {
   img1 = new Image();
