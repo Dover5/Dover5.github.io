@@ -9,4 +9,4 @@ Hold Q: Shoot left <br />
 Hold E: Shoot right <br />
 Z or 1-7: Change weapons <br />
 Esc: Menu <br />
-Mouse click on car to change it
+Mouse click your car to change it
