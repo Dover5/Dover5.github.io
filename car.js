@@ -929,6 +929,75 @@ function render (ms) {
 
 requestAnimationFrame(render);
 
+settings.onclick = function() {showMenu()};
+
+function showMenu() {
+  menu.classList.toggle("show");
+}
+
+const disconnect = document.getElementsByTagName('button')[1];
+
+disconnect.onclick = () => {
+  timedOut();
+};
+
+const clearScreen = document.getElementsByTagName('button')[2];
+
+clearScreen.onclick = () => {
+  ctx.clearRect(0, 0, 4000, 4000);
+};
+
+function weapon_propeties() {
+  if (weapons[current_weapon][0] == "Mines") {
+	if (max_mines == 0) {
+      ammo.innerHTML = `<img src="guns/gun${current_weapon+1}.png"> ${weapons[current_weapon][0]}  MAX`;
+	}
+	else {
+	  ammo.innerHTML = `<img src="guns/gun${current_weapon+1}.png"> ${weapons[current_weapon][0]} ${max_mines} <img src="guns/ammo.png">`;
+	} 
+  }
+  else {
+	ammo.innerHTML = `<img src="guns/gun${current_weapon+1}.png"> ${weapons[current_weapon][0]} ${current_ammo[current_weapon]} <img src="guns/ammo.png">`;
+  }
+}
+weapon_propeties();
+
+if (document.images) {
+  img1 = new Image();
+  img2 = new Image();
+  img3 = new Image();
+  img4 = new Image();
+  img5 = new Image();
+  img6 = new Image();
+  img7 = new Image();
+  img8 = new Image();
+  img9 = new Image();
+  img10 = new Image();
+  img11 = new Image();
+  img12 = new Image();
+  img13 = new Image();
+  img14 = new Image();
+  img15 = new Image();
+  img16 = new Image();
+   
+  img1.src = "guns/explosion/exp1.png";
+  img2.src = "guns/explosion/exp2.png";
+  img3.src = "guns/explosion/exp3.png";
+  img4.src = "guns/explosion/exp4.png";
+  img5.src = "guns/explosion/exp5.png";
+  img6.src = "guns/explosion/exp6.png";
+  img7.src = "guns/explosion/exp7.png";
+  img8.src = "guns/explosion/exp8.png";
+  img9.src = "guns/explosion/exp9.png";
+  img10.src = "guns/explosion/exp10.png";
+  img11.src = "guns/explosion/exp11.png";
+  img12.src = "guns/explosion/exp12.png";
+  img13.src = "guns/explosion/exp13.png";
+  img14.src = "guns/explosion/exp14.png";
+  img15.src = "guns/explosion/exp15.png";
+  img16.src = "guns/explosion/crater.png";
+}
+
 socket.on('connect', () => {
   sendParams(localCar);
 });
@@ -1033,73 +1102,4 @@ function sendParams (car) {
 	bullets,
 	hitId
   });
-}
-
-settings.onclick = function() {showMenu()};
-
-function showMenu() {
-  menu.classList.toggle("show");
-}
-
-const disconnect = document.getElementsByTagName('button')[1];
-
-disconnect.onclick = () => {
-  timedOut();
-};
-
-const clearScreen = document.getElementsByTagName('button')[2];
-
-clearScreen.onclick = () => {
-  ctx.clearRect(0, 0, 4000, 4000);
-};
-
-function weapon_propeties() {
-  if (weapons[current_weapon][0] == "Mines") {
-	if (max_mines == 0) {
-      ammo.innerHTML = `<img src="guns/gun${current_weapon+1}.png"> ${weapons[current_weapon][0]}  MAX`;
-	}
-	else {
-	  ammo.innerHTML = `<img src="guns/gun${current_weapon+1}.png"> ${weapons[current_weapon][0]} ${max_mines} <img src="guns/ammo.png">`;
-	} 
-  }
-  else {
-	ammo.innerHTML = `<img src="guns/gun${current_weapon+1}.png"> ${weapons[current_weapon][0]} ${current_ammo[current_weapon]} <img src="guns/ammo.png">`;
-  }
-}
-setTimeout(() => weapon_propeties(), 400);
-
-if (document.images) {
-  img1 = new Image();
-  img2 = new Image();
-  img3 = new Image();
-  img4 = new Image();
-  img5 = new Image();
-  img6 = new Image();
-  img7 = new Image();
-  img8 = new Image();
-  img9 = new Image();
-  img10 = new Image();
-  img11 = new Image();
-  img12 = new Image();
-  img13 = new Image();
-  img14 = new Image();
-  img15 = new Image();
-  img16 = new Image();
-   
-  img1.src = "guns/explosion/exp1.png";
-  img2.src = "guns/explosion/exp2.png";
-  img3.src = "guns/explosion/exp3.png";
-  img4.src = "guns/explosion/exp4.png";
-  img5.src = "guns/explosion/exp5.png";
-  img6.src = "guns/explosion/exp6.png";
-  img7.src = "guns/explosion/exp7.png";
-  img8.src = "guns/explosion/exp8.png";
-  img9.src = "guns/explosion/exp9.png";
-  img10.src = "guns/explosion/exp10.png";
-  img11.src = "guns/explosion/exp11.png";
-  img12.src = "guns/explosion/exp12.png";
-  img13.src = "guns/explosion/exp13.png";
-  img14.src = "guns/explosion/exp14.png";
-  img15.src = "guns/explosion/exp15.png";
-  img16.src = "guns/explosion/crater.png";
 }
