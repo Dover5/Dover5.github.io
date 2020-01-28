@@ -153,7 +153,7 @@ document.addEventListener('keydown', function(event) {
 	  weapon_propeties();
 	} 	
   }
-  if (key == "z" || key == "Z") {
+  if ((key == "z" || key == "Z") && writingMsg == false) {
 	current_weapon++;
     if (current_weapon > weapons.length-1) {
   	  current_weapon = 0;
@@ -998,6 +998,7 @@ if (document.images) {
   img16.src = "guns/explosion/crater.png";
 }
 
+/*
 socket.on('connect', () => {
   sendParams(localCar);
 });
@@ -1103,3 +1104,4 @@ function sendParams (car) {
 	hitId
   });
 }
+*/
