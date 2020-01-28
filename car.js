@@ -887,7 +887,7 @@ setInterval(() => {
 
   lastTime = ms;
 
-  sendParams(localCar);
+//  sendParams(localCar);
 }, 1000 / 60);
 
 function changeCar (user) {
