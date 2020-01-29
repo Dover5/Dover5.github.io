@@ -2,11 +2,11 @@
 
 // Nickname
 
-let randomNick = Math.floor((Math.random() * 100000) + 1);
+const randomNick = Math.floor((Math.random() * 100000) + 1);
 nickname = "Player" + String(randomNick);
 nick.innerHTML = nickname;
 
-let randomCar = Math.floor((Math.random() * 13) + 1);
+const randomCar = Math.floor((Math.random() * 13) + 1);
 user.style.backgroundImage = `url(cars/car${randomCar}.png)`;
 user.addEventListener('click', () => changeCar(user));
 
@@ -44,7 +44,7 @@ let writingMsg = false;
 carsTimeout = [];
 localCarTimeout = 0;
 
-let randomSpawn = Math.round((Math.random() * 3));
+const randomSpawn = Math.round((Math.random() * 3));
 const spawnPoints = [[100, 100], [666, 865], [1241, 481], [896, 365]];
 
 const buildingsCoords = [[0, 251, 180, 289, "1"], [322, 0, 320, 203, "2"], [283, 312, 143, 283, "3"], [457, 312, 208, 139, "4"], [545, 478, 119, 281, "5"], [283, 624, 235, 327, "6"], [673, 77, 414, 129, "7"], [772, 442, 314, 126, "8"], [773, 679, 361, 156, "9"], [37, 569, 144, 370, "10"], [945, 861, 190, 352, "11"], [1169, 227, 434, 140, "12"], [1465, 360, 138, 215, "12"], [282, 999, 384, 170, "13"], [1117, 31, 330, 150, "14"], [1642, 0, 148, 368, "16"], [1262, 692, 173, 397, "15"]];
@@ -53,8 +53,8 @@ window.onbeforeunload = function(){
   window.scrollTo(0, 0);
 }
 
-let windowWidth = window.innerWidth;
-let windowHeight = window.innerHeight;
+const windowWidth = window.innerWidth;
+const windowHeight = window.innerHeight;
 
 const canvas = document.getElementsByTagName('canvas')[0];
 const ctx = canvas.getContext('2d');
@@ -405,13 +405,6 @@ setInterval(() => {
 	
 	let vBx = Math.cos(bulletAngle) * bulletVelocity;
 	let vBy = Math.sin(bulletAngle) * bulletVelocity;
-	
-	if (localCar.xVelocity<0) {
-	  vBx *= 1;
-	}	
-	if (localCar.yVelocity<0) {
-	  vBy *= 1;
-	}
 		
 	function addBullet() {
 	  let bulletId = Math.floor((Math.random() * 10000000) + 1);
