@@ -1,6 +1,8 @@
 # DriveBy-Multiplayer-Game
-<h3>DriveBy - 2d Multiplayer Game / Node.js &amp; socket.io</h3> <br /><br />
+<h3> DriveBy - 2d Multiplayer Game / Node.js &amp; socket.io </h3> <br /><br />
+
 ![DriveBy Screenshot](https://raw.githubusercontent.com/Dover5/Dover5.github.io/master/DriveByScreenShot.jpg)
+
 <br />
 Drive: WSAD or arrows <br />
 Shoot: Space <br />
