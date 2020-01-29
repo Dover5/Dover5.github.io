@@ -41,8 +41,8 @@ let killTimeout = 0;
 let hitByMine = false;
 let carHitByMine = false;
 let writingMsg = false;
-carsTimeout = [];
-localCarTimeout = 0;
+let carsTimeout = [];
+let localCarTimeout = 0;
 
 const randomSpawn = Math.round((Math.random() * 3));
 const spawnPoints = [[100, 100], [666, 865], [1241, 481], [896, 365]];
